@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root { color-scheme: light dark; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        display: grid;
+        place-items: center;
+        background: linear-gradient(180deg, rgba(240,240,245,.8), rgba(230,230,240,.8));
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 720px;
+        background: color-mix(in hsl, Canvas 92%, black 0%);
+        border: 1px solid color-mix(in hsl, CanvasText 12%, transparent);
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      }
+      h1 { font-size: 28px; margin: 0 0 8px 0; letter-spacing: -0.02em; }
+      p.tagline { margin: 0 0 20px 0; color: color-mix(in hsl, CanvasText 70%, transparent); }
+      ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+      a.link {
+        display: flex; align-items: center; gap: 10px;
+        text-decoration: none;
+        padding: 12px 14px;
+        border: 1px solid color-mix(in hsl, CanvasText 14%, transparent);
+        border-radius: 12px;
+        color: inherit;
+        background: color-mix(in hsl, Canvas 96%, black 0%);
+        transition: transform .06s ease, background .15s ease, border-color .15s ease;
+      }
+      a.link:hover { transform: translateY(-1px); border-color: color-mix(in hsl, CanvasText 24%, transparent); }
+      .icon { width: 22px; height: 22px; opacity: .85; }
+      .spacer { height: 6px; }
+      .footer { margin-top: 18px; font-size: 12px; color: color-mix(in hsl, CanvasText 60%, transparent); }
+      .muted { color: color-mix(in hsl, CanvasText 50%, transparent); font-size: 14px; }
+      .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+      .cta { display: inline-flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 10px; border: 1px solid color-mix(in hsl, CanvasText 14%, transparent); text-decoration: none; color: inherit; }
+      .cta:hover { border-color: color-mix(in hsl, CanvasText 24%, transparent); }
+      .note { font-size: 12px; margin-top: 8px; }
+      @media (max-width: 480px) { h1 { font-size: 24px; } }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="row">
+        <div>
+          <h1>Hi, I'm <span id="name">Anav Madan</span></h1>
+          <p class="tagline">Software Engineer • Building useful things</p>
+        </div>
+        <a class="cta" id="resumeLink" href="./CS Resume (5) (1).pdf" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2.5L18.5 9H14z"/></svg>
+          <span>View Resume</span>
+        </a>
+      </div>
+
+      <div class="spacer"></div>
+
+      <ul class="links" aria-label="Profile links">
+        <li>
+          <a class="link" id="githubLink" href="https://github.com/DarkHelium" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.57v-2.23c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.76.08-.74.08-.74 1.21.08 1.85 1.25 1.85 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.78.42-1.31.77-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.44.38.82 1.12.82 2.27v3.36c0 .31.21.69.83.57A12 12 0 0 0 12 .5z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a class="link" id="linkedinLink" href="https://www.linkedin.com/in/anav-madan-03a9a0301/" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3.5a2.06 2.06 0 1 0 0 4.12 2.06 2.06 0 0 0 0-4.12zM20.44 20h-3.37v-5.9c0-1.41-.03-3.22-1.96-3.22-1.96 0-2.26 1.53-2.26 3.12V20h-3.38V8.5h3.24v1.57h.05c.45-.86 1.56-1.76 3.21-1.76 3.44 0 4.07 2.27 4.07 5.22V20z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="note muted">Replace the placeholders with your actual profiles.</p>
+    </main>
+  </body>
+  
+</html>
+
+
